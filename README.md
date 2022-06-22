@@ -7,20 +7,20 @@ import java.util.Scanner;
 public class Main {
    public static void main(String[]args) {
 
-   Scanner scanner = new Scanner(System.in);
-   System.out.println("Digite um número: ");
-   int a = scanner.nextInt();
-   System.out.println("Digite um número: ");
-   int b = scanner.nextInt();
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Digite um número: ");
+    int a = scanner.nextInt();
+    System.out.println("Digite um número: ");
+    int b = scanner.nextInt();
    
-   if (a > b) {
+    if (a > b) {
        System.out.println(a);
        
-   } else {
+    } else {
        System.out.println(b);
-   }
-}
-}
+    }
+    }
+    }
 
 2)	Criando um programa que peça um número e verifica se é positivo ou negativo:
 
@@ -29,17 +29,17 @@ import java.util.Scanner;
 public class Main {
    public static void main(String[]args) {
 
-   Scanner scanner = new Scanner(System.in);
-   System.out.println("Digite um número: ");
-   int a = scanner.nextInt();
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Digite um número: ");
+    int a = scanner.nextInt();
    
-   if(a > 0) {
+    if(a > 0) {
        System.out.println("O número é positivo");
-   } else {
+    } else {
        System.out.println("O número é negativo");
-   }  
-}
-}
+    }  
+    }
+    }
 
 3)	 Faça um programa que verifique (usando if e else) se uma letra digitada é “F” ou “M”. Conforme a letra escrever: F – Feminino, M- Masculino, Sexo inválido.
 
@@ -48,20 +48,20 @@ import java.util.Scanner;
 public class Main {
    public static void main(String[]args) {
 
-   Scanner scanner = new Scanner(System.in);
-   System.out.println("Digite uma letra: ");
-   String a = scanner.nextLine();
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Digite uma letra: ");
+    String a = scanner.nextLine();
    
-   if(a.equalsIgnoreCase("f")) {
+    if(a.equalsIgnoreCase("f")) {
        System.out.println("Sexo feminino");
-   } else if(a.equalsIgnoreCase("m")) {
+    } else if(a.equalsIgnoreCase("m")) {
        System.out.println("Sexo masculino");
-   } else {
+    } else {
        System.out.println("Sexo inválido");
-   }
+    }
  
-}
-}
+    }
+    }
 
 4)	Faça um programa que verifique (usando if e else) se uma letra digitada é vogal ou consoante
 
@@ -328,6 +328,69 @@ public class Main
     System.out.println("Percentual aplicado: 5%");
     System.out.println("Valor do aumento: " + (s * 5 / 100));
     System.out.println("Novo salário: " + (s + (s * 5 / 100)));
+    }
+    }
+    }
+    
+ 
+ 12) Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do salário bruto, mas não é descontado (é a empresa que deposita.)
+
+O salário líquido corresponde ao salário bruto menos os descontos O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês.
+
+a. Imprima salário bruto, desconto do IR; Desconto do INSS, FGTS, Total de descontos e salário liquido.
+
+b. Salário Bruto ate R$900,00 (inclusive) – Isento;
+c. Salário Bruto de R$ 1500, 00 (inclusive) – desconto de 5%;
+d. Salario bruto até R$ 2500,00 (Inclusive) – desconto de 10%;
+e. Salário bruto acima de 2500 – Desconto de 20%.
+Imprima na tela as informações, dispostas conforme o exemplo abaixo, no exemplo valor da hora é 5 e a quantidade de horas é 220.  
+
+import java.util.Scanner;
+
+public class Main
+{
+      public static void main (String[]args)
+         {
+         
+    Scanner scanner = new Scanner (System.in);
+    System.out.println ("Insira aqui o valor da sua hora: ");
+    double hd = scanner.nextDouble ();
+    System.out.println ("Insira aqui a quantidade de horas trabalhadas no mês: ");
+    double hm = scanner.nextDouble ();
+    
+    double hdm = (hd * hm);
+    
+    if(hdm <= 900) {
+    System.out.println("Salário bruto: R$ " + hdm);
+    System.out.println("IR (-): R$ " + (hdm * 0 / 100));
+    System.out.println("INSS (-): R$ " + (hdm * 10 / 100));
+    System.out.println("FGTS: R$ " + (hdm * 11 / 100));
+    System.out.println("Total de descontos: R$ " + (hdm * 10 / 100));
+    System.out.println("Salário liquido: R$ " + (hdm - (hdm * 10 / 100)));
+
+    } else if(hdm <= 1500) {
+    System.out.println("Salário bruto: R$ " + hdm);
+    System.out.println("IR (-): R$ " + (hdm * 5 / 100));
+    System.out.println("INSS (-): R$ " + (hdm * 10 / 100));
+    System.out.println("FGTS: R$ " + (hdm * 11 / 100));
+    System.out.println("Total de descontos: R$ " + (hdm * 15 / 100));
+    System.out.println("Salário liquido: R$ " + (hdm - (hdm * 15 / 100)));
+
+    } else if(hdm <= 2500) {
+    System.out.println("Salário bruto: R$ " + hdm);
+    System.out.println("IR (-): R$ " + (hdm * 10 / 100));
+    System.out.println("INSS (-): R$ " + (hdm * 10 / 100));
+    System.out.println("FGTS: R$ " + (hdm * 11 / 100));
+    System.out.println("Total de descontos: R$ " + (hdm * 20 / 100));
+    System.out.println("Salário liquido: R$ " + (hdm - (hdm * 20 / 100)));
+   
+    } else if(hdm > 2500) {
+    System.out.println("Salário bruto: R$ " + hdm);
+    System.out.println("IR (-): R$ " + (hdm * 20 / 100));
+    System.out.println("INSS (-): R$ " + (hdm * 10 / 100));
+    System.out.println("FGTS: R$ " + (hdm * 11 / 100));
+    System.out.println("Total de descontos: R$ " + (hdm * 30 / 100));
+    System.out.println("Salário liquido: R$ " + (hdm - (hdm * 30 / 100)));
     }
     }
     }
