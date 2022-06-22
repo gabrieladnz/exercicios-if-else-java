@@ -252,3 +252,32 @@ public class Main
     }
     }
 
+10)	 Faça um programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-vespertino ou N-noturno. Imprima a mensagem “Bom dia!” ou  “Boa Noite” ou “Valor inválido”, conforme o caso.  
+
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    Scanner scanner = new Scanner (System.in);
+    System.out.println ("Em qual turno você estuda? Digite M, V ou N: ");
+    String t = scanner.nextLine ();
+    
+    if(t.equalsIgnoreCase("m")) {
+    System.out.println ("Bom dia! ");
+    
+    }  else if (t.equalsIgnoreCase("v")) {
+    System.out.println ("Boa tarde! ");
+    
+    } else if (t.equalsIgnoreCase("n")) {
+    System.out.println ("Boa noite! ");
+    
+    } else {
+    System.out.println("Valor inválido ");
+    }
+    }
+    }
+  
+
