@@ -37,8 +37,7 @@ public class Main {
        System.out.println("O número é positivo");
    } else {
        System.out.println("O número é negativo");
-   }
-       
+   }  
 }
 }
 
