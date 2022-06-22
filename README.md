@@ -98,9 +98,8 @@ public class Main
     {
       System.out.println ("Consoante");
     }
-
-  }
-}
+    }
+    }
 
 5)	 Faça um programa para a leitura de duas notas parciais de um aluno.
 
@@ -125,9 +124,8 @@ public class Main
     } else {
         System.out.println("Reprovado");
     }
-
-  }
-}
+    }
+    }
 
 6)	Faça um programa que leia três números, verifique (usando if e else), e mostre o maior deles.
 
@@ -153,10 +151,8 @@ public class Main
     } else if((n3 > n1) && (n3> n2)) {
         System.out.println(n3);
     } 
-  
-  
-  }
-}
+    }
+    }
 
 7)	Faça um programa que leia três números, verifique (usando if e else) e mostre o maior e o menor deles;
 
@@ -190,10 +186,8 @@ public class Main
     } else if((n3 < n1) && (n3 < n2)) {
         System.out.println("O menor é: " + n3);
     } 
-  
-  
-  }
-}
+    }
+    }
 
 8)	Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre o mais barato. 
 
@@ -219,7 +213,5 @@ public class Main
     } else if((p3 < p1) && (p3 < p2)) {
         System.out.println("Esse é o produto ideal: " + p3);
     } 
-  
-  
-  }
-}
+    }
+    }
