@@ -216,10 +216,9 @@ public class Main
     }
     }
     
-    9)	Faça um programa que leia três números e mostre-os em ordem decrescente. 
-
+ 9) Faça um programa que leia três números e mostre-os em ordem decrescente:
+ 
 import java.util.Scanner;
-
 public class Main
 {
   public static void main (String[]args)
