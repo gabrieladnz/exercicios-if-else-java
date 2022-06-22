@@ -280,4 +280,54 @@ public class Main
     }
     }
   
+11) As organizações CSM resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o programa que calculará os reajustes.  
+•	a. Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual;
+•	b. Salários até R$ 280,00 (incluindo): aumento de 20%;
+•	c. Salários entre R$ 280,00 e R$700,00: aumento de 15%;
+•	d. Salários entre R$ 700,00 e R$ 1500,00: aumento de 10%;
+•	e. Salários de R$ 1500,00 em diante: aumento de 5%
+Após o aumento ser realizado; informe na tela;
+•	a. O salário antes do reajuste;
+•	b. O percentual de aumento aplicado;
+•	c. O valor do aumento;
+•	d. O novo salário, após o aumento.  
 
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    
+    
+    Scanner scanner = new Scanner (System.in);
+    System.out.println ("Insira aqui seu salário: ");
+    double s = scanner.nextDouble ();
+    
+    if(s <= 280) {
+    System.out.println("Salário antes do reajuste: " + s);
+    System.out.println("Percentual aplicado: 20%");
+    System.out.println("Valor do aumento: " + (s * 20 / 100));
+    System.out.println("Novo salário: " + (s + (s * 20 / 100)));
+    
+    } else if((s > 280) && (s <= 700)) {
+    System.out.println("Salário antes do reajuste: " + s);
+    System.out.println("Percentual aplicado: 15%");
+    System.out.println("Valor do aumento: " + (s * 15 / 100));
+    System.out.println("Novo salário: " + (s + (s * 15 / 100)));
+    
+    } else if((s > 700) && (s <= 1500)) {
+    System.out.println("Salário antes do reajuste: " + s);
+    System.out.println("Percentual aplicado: 10%");
+    System.out.println("Valor do aumento: " + (s * 10 / 100));
+    System.out.println("Novo salário: " + (s + (s * 10 / 100)));
+    
+    } else if(s > 1500) {
+    System.out.println("Salário antes do reajuste: " + s);
+    System.out.println("Percentual aplicado: 5%");
+    System.out.println("Valor do aumento: " + (s * 5 / 100));
+    System.out.println("Novo salário: " + (s + (s * 5 / 100)));
+    }
+    }
+    }
