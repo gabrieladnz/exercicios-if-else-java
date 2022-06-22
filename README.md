@@ -129,4 +129,31 @@ public class Main
   }
 }
 
+6)	Faça um programa que leia três números, verifique (usando if e else), e mostre o maior deles.
 
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    Scanner scanner = new Scanner (System.in);
+    System.out.println ("Insira o primeiro número: ");
+    int n1 = scanner.nextInt ();
+    System.out.println ("Insira o segundo número: ");
+    int n2 = scanner.nextInt ();
+    System.out.println ("Insira o terceiro número: ");
+    int n3 = scanner.nextInt ();
+    
+    if((n1 > n2) && (n1 > n3)) {
+      System.out.println (n1);
+    } else if((n2 > n1) && (n2 > n3)) {
+        System.out.println(n2);
+    } else if((n3 > n1) && (n3> n2)) {
+        System.out.println(n3);
+    } 
+  
+  
+  }
+}
