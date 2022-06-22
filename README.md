@@ -215,3 +215,41 @@ public class Main
     } 
     }
     }
+    
+    9)	Faça um programa que leia três números e mostre-os em ordem decrescente. 
+
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    Scanner scanner = new Scanner (System.in);
+    System.out.println ("Insira: ");
+    int n1 = scanner.nextInt ();
+    System.out.println ("Insira: ");
+    int n2 = scanner.nextInt ();
+    System.out.println ("Insira: ");
+    int n3 = scanner.nextInt ();
+    
+    if((n1 > n2) && (n1 > n3) && (n2 > n3)) {
+    System.out.println ("= " + n1);
+    System.out.println ("= " + n2);
+    System.out.println ("= " + n3);
+    } else if ((n2 > n1) && (n2 > n3) && (n1 > n3)) {
+    System.out.println ("= " + n2);
+    System.out.println ("= " + n1);
+    System.out.println ("= " + n3);
+    } else if ((n3 > n1) && (n3 > n2) && (n2 > n1)) {
+    System.out.println ("= " + n3);
+    System.out.println ("= " + n2);
+    System.out.println ("= " + n1);
+    } else if ((n2 > n1) && (n2 > n3) && (n3 > n1)) {
+    System.out.println ("= " + n2);
+    System.out.println ("= " + n3);
+    System.out.println ("= " + n1);
+    }
+    }
+    }
+
