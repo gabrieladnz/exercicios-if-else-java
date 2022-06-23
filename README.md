@@ -555,3 +555,40 @@ public class Main
     
     }
     }
+    
+   17) Faça um Programa que leia 1 número e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número e:
+
+Par ou ímpar;
+Positivo ou negativo;
+
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    Scanner scanner = new Scanner (System.in);
+    System.out.println ("Insira o número: ");
+    int n1 = scanner.nextInt ();
+    System.out.println ("Qual operação deseja realizar? Insira 1- saber se é par ou impar ou 2- saber se é positivo ou negativo");
+    int op = scanner.nextInt();
+    
+    int r = (n1 % 2);
+    
+    if((op == 1) && (r == 0)) {
+        System.out.println("O número é par");
+        
+    } else if((op == 1) && (r != 0)) {
+        System.out.println("O número é impar");
+    }
+    
+    if((op == 2) && (n1 > 0)) {
+        System.out.println("O número é positivo");
+        
+    } else if((op == 2) && (n1 < 0)) {
+        System.out.println("O número é negativo");
+    }
+    
+    }
+    }
