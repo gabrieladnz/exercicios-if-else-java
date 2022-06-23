@@ -430,3 +430,67 @@ public class Main
     
     }
     }
+
+14) Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo: Entre 9.0 e 10.0 A
+
+Entre 7.5 e 9.0   B
+Entre 6.0 e 7.5   C
+Entre 4.0 e 6.0   D
+Entre 4.0 e 0     E  
+
+O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C “REPROVADO” se o conceito for D ou E. 
+
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    Scanner scanner = new Scanner (System.in);
+    System.out.println ("Insira a nota 1: ");
+    double n1 = scanner.nextInt ();
+    System.out.println ("Insira a nota 2: ");
+    double n2 = scanner.nextInt ();
+
+    double m = (n1 + n2);
+    double M = (m / 2);
+    
+    if((M >= 9) && (M <= 10)) {
+        System.out.println("Nota 1: " + n1);
+        System.out.println("Nota 2: " + n2);
+        System.out.println("Média: " + M);
+        System.out.println("Conceito: A");
+        System.out.println("Aprovado!");
+        
+    } else if((M >= 7.5) && (M < 9)) {
+        System.out.println("Nota 1: " + n1);
+        System.out.println("Nota 2: " + n2);
+        System.out.println("Média: " + M);
+        System.out.println("Conceito: B");
+        System.out.println("Aprovado!");
+        
+    } else if((M >= 6) && (M < 7.5)) {
+        System.out.println("Nota 1: " + n1);
+        System.out.println("Nota 2: " + n2);
+        System.out.println("Média: " + M);
+        System.out.println("Conceito: C");
+        System.out.println("Aprovado!");
+        
+    } else if((M >= 4) && (M < 6)) {
+        System.out.println("Nota 1: " + n1);
+        System.out.println("Nota 2: " + n2);
+        System.out.println("Média: " + M);
+        System.out.println("Conceito: D");
+        System.out.println("Reprovado");
+        
+    } else if((M >= 0) && (M < 4)) {
+        System.out.println("Nota 1: " + n1);
+        System.out.println("Nota 2: " + n2);
+        System.out.println("Média: " + M);
+        System.out.println("Conceito: E");
+        System.out.println("Reprovado");
+    }
+    }
+    }
+ 
