@@ -592,3 +592,70 @@ public class Main
     
     }
     }
+    
+18) Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+
+"Telefonou para a vítima?"
+"Esteve no local do crime?"
+"Mora perto da vítima?"
+"Devia para a vítima?"
+"Já trabalhou com a vítima?"
+O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como “Assassino“. Caso contrário, ele será classificado como "Inocente“.
+
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    Scanner scanner = new Scanner (System.in);
+    System.out.println ("Telefonou para a vítima?");
+    String p1 = scanner.nextLine();
+    System.out.println ("Esteve no local do crime?");
+    String p2 = scanner.nextLine();
+    System.out.println ("Mora perto da vítima?");
+    String p3 = scanner.nextLine();
+    System.out.println("Devia para a vítima?");
+    String p4 = scanner.nextLine();
+    System.out.println("Já trabalhou com a vítima?");
+    String p5 = scanner.nextLine();
+    
+    int ct = 0;
+    
+    if(p1.equalsIgnoreCase("sim")) {
+        ct = ct + 1;
+        
+        if(p2.equalsIgnoreCase("sim")) {
+            ct = ct + 1;
+            
+            if(p3.equalsIgnoreCase("sim")) {
+                ct = ct + 1;
+                
+                if(p4.equalsIgnoreCase("sim")) {
+                    ct = ct +1;
+                    
+                    if(p5.equalsIgnoreCase("sim")) {
+                        ct = ct +1;
+                    }
+                }
+            }
+        }
+    }
+    
+    if(ct == 2) {
+        System.out.println("Suspeito");
+        
+    } else if((ct >= 3) && (ct <= 4)) {
+        System.out.println("Cúmplice");
+        
+    } else if(ct == 5) {
+        System.out.println("Culpado");
+        
+    } else {
+        System.out.println("Inocente");
+    }
+       
+    }
+    }
+
