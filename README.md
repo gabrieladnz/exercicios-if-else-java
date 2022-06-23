@@ -494,3 +494,40 @@ public class Main
     }
     }
  
+ 15) Faça um programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dicas:
+
+Três lados formam um triangulo quando a soma de quaisquer dos dois lados é maior que o terceiro.
+Triângulo Equilátero: três lados iguais;
+Triângulo Isósceles: quaisquer dois lados iguais;
+Triângulo Escaleno: três lados diferentes;
+
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    Scanner scanner = new Scanner (System.in);
+    System.out.println ("Lado 1: ");
+    int t1 = scanner.nextInt ();
+    System.out.println ("Lado 2: ");
+    int t2 = scanner.nextInt ();
+    System.out.println ("Lado 3: ");
+    int t3 = scanner.nextInt ();
+    
+    
+    if((t1 + t2 < t3) || (t2 + t3 < t1) || (t3 + t1 < t2)){
+        System.out.println("Não é um Triângulo");
+        
+    } else if((t1 == t2) && (t2 == t3)){
+        System.out.println("Triângulo Equilátero");
+    
+    } else if((t1 == t2) || (t2 == t3) || (t3 == t1)) {
+        System.out.println("Triângulo Isósceles");
+        
+    } else if((t1 != t2) && (t2 != t3)) {
+        System.out.println("Triângulo Escaleno");
+    } 
+    }
+    }
