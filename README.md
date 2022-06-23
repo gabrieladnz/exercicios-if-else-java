@@ -531,3 +531,27 @@ public class Main
     } 
     }
     }
+    
+  16) Faça um Programa que peça um número inteiro e determine se ele e par ou ímpar. Dica: utilize o operador módulo (resto da divisão):
+
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    Scanner scanner = new Scanner (System.in);
+    System.out.println ("Insira um número: ");
+    int n = scanner.nextInt ();
+    
+    int d = (n % 2);
+    
+    if(d == 0) {
+        System.out.println("Par!");
+    } else {
+        System.out.println("Impar!");
+    }
+    
+    }
+    }
